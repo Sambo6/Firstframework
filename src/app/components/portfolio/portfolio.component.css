@@ -1,0 +1,19 @@
+.layer__ {
+    background-color: rgba(26, 188, 156, 0.9);
+    opacity: 0;
+    cursor: pointer;
+    transition: .6s opacity;
+}
+
+.layer__:hover {
+    opacity: 1;
+}
+
+
+.model__ {
+    z-index: 9999;
+}
+
+img {
+    width: 600px;
+}

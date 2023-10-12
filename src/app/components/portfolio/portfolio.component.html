@@ -1,0 +1,29 @@
+<div class="mb-4">
+    <app-star title="portfolio component" customColor="#2c3e50"></app-star>
+
+    <div class="container">
+        <div class="row g-5">
+
+
+            <div class="col-lg-4 col-md-6" *ngFor="let src of srcs">
+                <div class=" rounded-3 overflow-hidden position-relative">
+                    <img [src]="src" class="w-100 rounded-3" alt="">
+
+                    <div (click)="flag = false; modelImg=src" class="layer__ position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- true hide -->
+    <!-- false show -->
+    <div (click)="hideModel($event.target,img)" [class.d-none]="flag" class="model__ position-fixed start-0 w-100 top-0 h-100 bg-primary bg-opacity-25 d-flex justify-content-center align-items-center">
+        <img #img [src]="modelImg" alt="">
+    </div>
+</div>
+
